@@ -14,10 +14,10 @@ git clone https://github.com/seu-usuario/projeto-jogo-canvas.git
 
 ## Recursos e Referências
 
-[Livro Lógica de Programação - Casa do Código](https://www.casadocodigo.com.br/products/livro-programacao)
-[Livro Desenvolva Jogos Com Html5 Canvas e Javascript](https://www.amazon.com/Desenvolva-Jogos-Html5-Canvas-Javascript/dp/8566250389)
-[MDN Web Docs - Canvas](https://developer.mozilla.org/pt-BR/docs/Web/API/Canvas_API)
-[MDN Web Docs - JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [Livro Lógica de Programação - Casa do Código](https://www.casadocodigo.com.br/products/livro-programacao)
+- [Livro Desenvolva Jogos Com Html5 Canvas e Javascript](https://www.amazon.com/Desenvolva-Jogos-Html5-Canvas-Javascript/dp/8566250389)
+- [MDN Web Docs - Canvas](https://developer.mozilla.org/pt-BR/docs/Web/API/Canvas_API)
+- [MDN Web Docs - JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
 ## Contato
 

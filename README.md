@@ -10,7 +10,6 @@ Este projeto consiste na criação de jogos simples em 2D usando a tag `<canvas>
 
 1. Clone este repositório para o seu ambiente de desenvolvimento local:
 
-```bash
 git clone https://github.com/seu-usuario/projeto-jogo-canvas.git
 
 ## Recursos e Referências

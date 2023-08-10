@@ -10,7 +10,7 @@ Este projeto consiste na criação de jogos simples em 2D usando a tag `<canvas>
 
 1. Clone este repositório para o seu ambiente de desenvolvimento local:
 
-git clone https://github.com/seu-usuario/jogoCanvas.git
+git clone https://github.com/ivano-lab/jogoCanvas.git
 
 ## Recursos e Referências
 

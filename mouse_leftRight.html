@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lousa</title>
+</head>
+<body>
+  <div id="tela" style="width: 400px; height: 400px; background-color: #f0f0f0;"></div>
+
+  <script>
+    const tela = document.getElementById("tela")
+
+    tela.addEventListener("mousedown", function(evento) {
+      if (evento.button === 0) {
+        desenhaCirculo(evento.clientX, evento.clientY, "blue");  
+      } else if (evento.button === 2){
+        desenhaCirculo(evento.clientX, evento.clientY, "red");
+      }
+    });  
+    
+    function desenhaCirculo(x, y, cor) {
+      const circ = document.createElement("div");
+      circ.style.width = "20px";
+      circ.style.height = "20px";
+      circ.style.backgroundColor = cor;
+      circ.style.borderRadius = "50%";
+      circ.style.position = "absolute";
+      circ.style.left = x - 10 + "px";
+      circ.style.top = y - 10 + "px";
+      tela.appendChild(circ);
+    }
+      
+
+  </script>
+</body>
+</html>

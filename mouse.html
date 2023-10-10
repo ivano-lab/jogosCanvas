@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,27 +7,52 @@
 </head>
 <body>
   <canvas id="tela" width="600" height="400"></canvas>
+  <canvas id="cores" width="700" height="500"></canvas>
 
   <script>
     var tela = document.getElementById("tela");
     var c = tela.getContext("2d");
+    var corEscolhida;
 
-    c.fillStyle="gray";
+    var cores = document.getElementById("cores");
+    var co = cores.getContext("2d");
+
+    c.fillStyle = "gray";
     c.fillRect(0, 0, 600, 400);
 
-    var desenhaCirculo = function(evento) {
-        var x = evento.pageX - tela.offsetLeft;
-        var y = evento.pageY - tela.offsetTop;
-        c.fillStyle = "blue";
-        c.beginPath();
-        c.arc(x, y, 10, 0, 2*3.14);
-        c.fill();
+    co.fillStyle = "red";
+    co.fillRect(0, 0, 200, 100);
 
-        console.log(`Posição do clique ${x}, ${y}`);
+    co.fillStyle = "blue";
+    co.fillRect(200, 0, 200, 100);
 
+    co.fillStyle = "yellow";
+    co.fillRect(400, 0, 200, 100);
+
+    var escolheCor = function(evento) {
+      var x = evento.pageX - cores.offsetLeft;
+      var y = evento.pageY - cores.offsetTop;
+      if (x > 0 && x < 201) {
+        corEscolhida = "red";
+      } else if (x > 200 && x < 401) {
+        corEscolhida = "blue";
+      } else if (x > 400 && x < 600) {
+        corEscolhida = "yellow";
       }
+    }
 
-    tela.onclick = desenhaCirculo;
+    var desenhaCirculo = function(evento) {
+      var x = evento.pageX - tela.offsetLeft;
+      var y = evento.pageY - tela.offsetTop;
+      c.fillStyle = corEscolhida; // Usando a variável global corEscolhida
+      c.beginPath();
+      c.arc(x, y, 10, 0, 2 * Math.PI);
+      c.fill();
+    }
+
+    cores.onclick = escolheCor; // Quando você clica nas cores, a cor é escolhida
+    tela.onmousemove = desenhaCirculo; // Quando você move o mouse na tela, desenha um círculo com a cor escolhida
+
   </script>
 </body>
 </html>
